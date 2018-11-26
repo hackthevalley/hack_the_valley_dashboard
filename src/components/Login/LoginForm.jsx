@@ -10,11 +10,11 @@ class _LoginForm extends React.Component {
       button,
       items,
       errorCodes,
-      ...remainingProps
+      onSubmit
     } = this.props;
     return <form
       className={`${block}__form`}
-      {...remainingProps}
+      onSubmit={onSubmit}
     >
       {
         items.map((props, key) =>

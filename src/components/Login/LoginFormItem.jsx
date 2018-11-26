@@ -15,7 +15,7 @@ export class LoginFormItem extends React.Component {
       options
     } = this.props;
     return <div className={`${block}__item htv__form-item`}>
-      <label className={`${block}__label htv__form-label`} htmlfor={`${id}`}>{ label }</label>
+      <label className={`${block}__label htv__form-label`} htmlFor={`${id}`}>{ label }</label>
       {
         type === "select"?
         <select id={id} className={`${block}__select htv__form-select`} {...inputProps}>

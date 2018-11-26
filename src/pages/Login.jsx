@@ -109,7 +109,7 @@ class _Login extends React.Component {
       <IsNotLoggedIn>
         <main className="login">
           <section className="login__section login__section--login">
-              <img src={require('../assets/logo.png')} width={70} />
+              <img src={require('../assets/logo.png')} alt={"logo"} width={70} />
             <div className="login__head">
               <h1 className="login__header">Hack The Valley</h1>
               <span className="login__subheader">Hacker Dashboard</span>

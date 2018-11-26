@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from "react-redux";
-import {ApplicationFormField, DelayedLink, ErrorCodes} from '../components';
+import {ApplicationFormField} from '../components';
 import {
   getApplicationsAction,
   getEventsAction,
@@ -15,9 +15,7 @@ import {
   selectMyApplicationQuestionsHashMap,
   selectApplicationFormQuestionsHashMap
 } from '../selectors';
-import {Link} from "react-router-dom";
 import {BackButton} from "../components/Navigations";
-
 
 async function chain(arr, fn) {
   const result = []
@@ -119,7 +117,7 @@ class _ApplicationForm extends Component {
   };
 
   handleSubmit = () => {
-    if(window.confirm("Are you sure you want to submit your application? Once an application is submitted, you cannot make changes anymore.")) {
+    if (window.confirm("Are you sure you want to submit your application? Once an application is submitted, you cannot make changes anymore.")) {
       this.props.dispatch(submitHackerApplicationAction(this.getHackerApplication()._id));
     }
   };
@@ -135,10 +133,6 @@ class _ApplicationForm extends Component {
       myApplicationAnswersByQuestionId,
       application,
     } = this.props;
-    const {
-      questionErrorCodes,
-      questionSaved,
-    } = this.state;
     if (!me || !application || !myApplicationAnswersByQuestionId) {
       return null;
     }
@@ -166,7 +160,7 @@ class _ApplicationForm extends Component {
               <small className="app__small-label">
                 Application has been submitted.
               </small>
-            ): (
+            ) : (
               <Fragment>
                 <small className="app__small-label">
                   You can keep updating your application until you decide to submit.
@@ -186,10 +180,10 @@ class _ApplicationForm extends Component {
                       Submit
                     </button>
                   </Fragment>
-                ): (
+                ) : (
                   <Fragment>
                     <br/>
-                    <i className="fa fa-spinner fa-spin" aria-hidden="true" />
+                    <i className="fa fa-spinner fa-spin" aria-hidden="true"/>
                   </Fragment>
                 )}
               </Fragment>

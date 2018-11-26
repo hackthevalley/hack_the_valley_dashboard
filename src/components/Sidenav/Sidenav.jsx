@@ -82,7 +82,7 @@ class _Sidenav extends Component {
 
     return <nav className={`sidenav sidenav--${expanded? "expanded": "collapsed"}`}>
       <div className="sidenav__brand">
-        <img src={require('../../assets/logo_white.png')} width={70} /><br/>
+        <img src={require('../../assets/logo_white.png')} alt={"logo"} width={70} /><br/>
         <span className="sidenav__header">Hack The Valley</span>
         <span className="sidenav__subheader">Hacker Dashboard</span>
       </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import {ApplicationFormTextField} from './ApplicationFormTextField';
 import {ApplicationFormTextAreaField} from './ApplicationFormTextAreaField';
-import {ApplicationFormRadioField} from './ApplicationFormRadioField';
 import {ApplicationFormCheckboxField} from './ApplicationFormCheckboxField';
 import {ApplicationFormSelectField} from './ApplicationFormSelectField';
 import '../../scss/components/applicationform/applicationform.scss';

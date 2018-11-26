@@ -3,8 +3,6 @@ import {connect} from 'react-redux';
 import '../scss/pages/profile.scss';
 import {getMeAction, updateHackerAction} from '../redux/actions';
 import {selectHackersMe} from '../selectors';
-import { Profile as avatar } from '../assets';
-import {Announcement} from '../components/Announcements';
 import SchoolNameServiceProvider from "../providers/SchoolNameServiceProvider";
 import {Hacker} from "../models";
 import {ErrorCodes} from "../components/ErrorCodes";
@@ -168,7 +166,7 @@ class _Profile extends Component {
         <div className="profile__content">
           <div className="profile__form-item profile__col">
             <label className="profile__label" htmlFor="email_address">Email address</label>
-            <input 
+            <input
               id="email_address"
               type="email"
               className="profile__input"
