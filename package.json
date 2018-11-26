@@ -22,8 +22,6 @@
   "scripts": {
     "start": "REACT_APP_VERSION=`git rev-parse --short HEAD` react-scripts start",
     "build": "REACT_APP_VERSION=`git rev-parse --short HEAD` react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
