@@ -22,6 +22,11 @@
     padding-bottom: 16px;
     display: flex;
     flex-direction: column;
+    &--error {
+      input {
+        border: #FFCDD2 2px solid;
+      }
+    }
   }
 
   &__avatar {

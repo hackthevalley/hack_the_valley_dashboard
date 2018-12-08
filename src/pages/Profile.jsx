@@ -88,7 +88,7 @@ class _Profile extends Component {
             </div>
           </div>
           <div className="profile__col">
-            <div className="profile__form-item">
+            <div className={`profile__form-item ${this.state.me.first_name ? "" : "profile__form-item--error"}`}>
               <label className="profile__label" htmlFor="first_name">First Name *</label>
               <input
                 id="first_name"
@@ -101,7 +101,7 @@ class _Profile extends Component {
                 placeholder="john"
               />
             </div>
-            <div className="profile__form-item">
+            <div className={`profile__form-item ${this.state.me.last_name ? "" : "profile__form-item--error"}`}>
               <label className="profile__label" htmlFor="last_name">Last Name *</label>
               <input
                 id="last_name"
@@ -114,7 +114,7 @@ class _Profile extends Component {
                 placeholder="doe"
               />
             </div>
-            <div className="profile__form-item">
+            <div className={`profile__form-item ${this.state.me.phone_number ? "" : "profile__form-item--error"}`}>
               <label className="profile__label" htmlFor="last_name">Phone Number *</label>
               <input
                 id="phone_number"
@@ -144,7 +144,7 @@ class _Profile extends Component {
               </select>
             </div>
 
-            <div className="profile__form-item">
+            <div className={`profile__form-item ${this.state.me.dob ? "" : "profile__form-item--error"}`}>
               <label className="profile__label" htmlFor="dob">
                   Date of birth *<br/>
                   <small>This is used to determine your eligibility for our events.</small>
@@ -178,8 +178,8 @@ class _Profile extends Component {
             />
           </div>
 
-          <div className="profile__form-item profile__col">
-            <label className="profile__label" htmlFor="dob">University / School</label>
+          <div className={`profile__form-item profile__col ${this.state.me.school ? "" : "profile__form-item--error"}`}>
+            <label className="profile__label" htmlFor="dob">University / School *</label>
             <input
               id="school"
               type="text"
@@ -266,6 +266,6 @@ class _Profile extends Component {
 
 export const Profile = connect((state) => ({
   me: selectHackersMe(state),
-    fetching: state.fetch.fetching,
+  fetching: state.fetch.fetching,
   fetchCount: state.fetch.fetchCount
 }))(_Profile);

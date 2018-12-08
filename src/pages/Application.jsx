@@ -50,7 +50,6 @@ class _Application extends Component {
               {
                 myApplications.length > 0 ?
                   myApplications.map((app, key) => {
-                    console.log(app);
                     return (
                       <li className="app__item" key={key}>
                         <h3>{app.application.event.name} - {app.application.name}</h3>
@@ -98,7 +97,7 @@ class _Application extends Component {
                     <h3>{ name }</h3>
                     <ul className="app__items">
                       {
-                        applications.map(app => {console.log(app)
+                        applications.map(app => {
                           return (
                             <li key={app._id} className="app__item">
                               <h4>{app.name}</h4>
