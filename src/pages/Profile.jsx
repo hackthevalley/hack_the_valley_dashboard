@@ -27,7 +27,10 @@ class _Profile extends Component {
     const { me } = this.props;
     // Update this.state.me if a new prop is received
     if (me !== prevProps.me) {
-      this.setState({ me })
+      this.setState({ me });
+      window.drift.identify(me._id, {
+        email: me.email_address
+      });
     }
   }
 
