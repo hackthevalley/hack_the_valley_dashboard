@@ -20,16 +20,17 @@ class _Application extends Component {
     const {
       myApplications,
       eventsWithMyApplicationsFlagged,
+      me
     } = this.props;
     if (!myApplications || !eventsWithMyApplicationsFlagged) {
       return null;
     }
 
-    if(!this.props.me) {
+    if(!me) {
       return <p><i className="fa fa-spinner fa-spin" aria-hidden="true" /></p>
     }
 
-    if(!this.props.me.first_name || !this.props.me.last_name || !this.props.me.dob || !this.props.me.school || !this.props.me.phone_number) {
+    if(!me.first_name || !me.last_name || !me.dob || !me.school || !me.phone_number) {
       return (
         <Announcement>
           You must fill out all required information on profile page before you can proceed to apply for events.<br/>
