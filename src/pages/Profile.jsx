@@ -91,12 +91,13 @@ class _Profile extends Component {
             </div>
           </div>
           <div className="profile__col">
-            <div className={`profile__form-item ${this.state.me.first_name ? "" : "profile__form-item--error"}`}>
+            <div className={'profile__form-item'}>
               <label className="profile__label" htmlFor="first_name">First Name *</label>
               <input
                 id="first_name"
                 type="text"
                 className="profile__input"
+                required={true}
                 name="first_name"
                 value={this.state.me.first_name}
                 autoComplete="given-name"
@@ -104,26 +105,28 @@ class _Profile extends Component {
                 placeholder="john"
               />
             </div>
-            <div className={`profile__form-item ${this.state.me.last_name ? "" : "profile__form-item--error"}`}>
+            <div className={'profile__form-item'}>
               <label className="profile__label" htmlFor="last_name">Last Name *</label>
               <input
                 id="last_name"
                 type="text"
                 className="profile__input"
                 name="last_name"
+                required={true}
                 value={this.state.me.last_name}
                 onChange={this.handleTextChange}
                 autoComplete="family-name"
                 placeholder="doe"
               />
             </div>
-            <div className={`profile__form-item ${this.state.me.phone_number ? "" : "profile__form-item--error"}`}>
+            <div className={'profile__form-item'}>
               <label className="profile__label" htmlFor="last_name">Phone Number *</label>
               <input
                 id="phone_number"
                 type="text"
                 className="profile__input"
                 name="phone_number"
+                required={true}
                 value={this.state.me.phone_number}
                 onChange={this.handleTextChange}
                 placeholder="123-456-7890"
@@ -147,7 +150,7 @@ class _Profile extends Component {
               </select>
             </div>
 
-            <div className={`profile__form-item ${this.state.me.dob ? "" : "profile__form-item--error"}`}>
+            <div className={'profile__form-item'}>
               <label className="profile__label" htmlFor="dob">
                   Date of birth *<br/>
                   <small>This is used to determine your eligibility for our events.</small>
@@ -155,6 +158,7 @@ class _Profile extends Component {
               <input
                 id="dob"
                 type="date"
+                required={true}
                 className="profile__input"
                 name="dob"
                 value={this.state.me.dob}
@@ -181,11 +185,12 @@ class _Profile extends Component {
             />
           </div>
 
-          <div className={`profile__form-item profile__col ${this.state.me.school ? "" : "profile__form-item--error"}`}>
+          <div className={'profile__form-item profile__col'}>
             <label className="profile__label" htmlFor="dob">University / School *</label>
             <input
               id="school"
               type="text"
+              required={true}
               className="profile__input"
               name="school"
               value={this.state.me.school}
