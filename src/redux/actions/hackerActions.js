@@ -71,6 +71,7 @@ export function getMeAction() {
         ? err.graphQLErrors.map(err => err.message)
         : err.errorCodes;
       const error = new HttpRequestError(errorCodes);
+      console.log(err);
       return Promise.all([
         dispatch({ type: GETME_FAIL, error }),
         dispatch({ type: FETCH_FAIL, error }),

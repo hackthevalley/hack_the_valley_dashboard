@@ -81,30 +81,6 @@
     font-weight: bold;
     padding-bottom: 4px;
   }
-
-  &__button {
-    background-color: darken($highlight, 5%);
-    box-shadow: $elevate-10;
-    color: $tone-1;
-    border-radius: 4px;
-    font-size: 12px;
-    border: none;
-    margin-top: 15px;
-    font-weight: bold;
-    padding: 12px 30px;
-    outline: none;
-    cursor: pointer;
-    &:hover {
-      background-color: darken($highlight, 20%);
-    }
-    &:disabled {
-      opacity: 0.5;
-      &:hover {
-        background-color: darken($highlight, 5%);
-        cursor: default;
-      }
-    }
-  }
 }
 
 @include tablet {

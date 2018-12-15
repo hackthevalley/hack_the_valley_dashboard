@@ -44,6 +44,7 @@ class _App extends Component {
     return (
       <Switch>
         <Route exact path="/" component={Pages.Login}/>
+        <Route exact path="/forgotpassword" component={Pages.ForgotPassword}/>
         <Dashboard>
           <Switch>
             { ROUTES.map((props, key) => <Route exact key={key} { ...props }/>) }

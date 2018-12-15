@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import '../scss/pages/login.scss';
-import { LoginForm } from '../components';
+import '../scss/components/buttons/buttons.scss';
+import {DelayedLink, LoginForm} from '../components';
 import { createHackerTokenAction, createHackerAction } from '../redux/actions';
 import { IsNotLoggedIn } from '../containers';
 
@@ -122,6 +123,7 @@ class _Login extends React.Component {
               onSubmit={this.handleLogin}
               errorCodes={loginErrorCodes}
             />
+            <DelayedLink className={"button button--light"} to={"/forgotpassword"}>Forgot Password?</DelayedLink>
           </section>
           <section className="login__section login__section--register">
             <h2 className="login__form-header">Register</h2>

@@ -7,7 +7,7 @@
     "@sentry/browser": "^4.3.2",
     "connected-react-router": "^4.4.1",
     "history": "^4.7.2",
-    "htv-sdk": "^1.1.2",
+    "htv-sdk": "^1.1.7",
     "localforage": "^1.7.2",
     "md5": "^2.2.1",
     "react": "^16.4.2",
